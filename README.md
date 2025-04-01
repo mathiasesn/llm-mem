@@ -1,6 +1,6 @@
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Quality Check](https://github.com/mathiasesn/llm-mem/actions/workflows/check.yaml/badge.svg?branch=master)](https://github.com/mathiasesn/llm-mem/actions/workflows/check.yaml)
+[![Quality Check](https://github.com/mathiasesn/llm-mem/actions/workflows/check.yaml/badge.svg)](https://github.com/mathiasesn/llm-mem/actions/workflows/check.yaml)
 [![Unit Tests](https://github.com/mathiasesn/llm-mem/actions/workflows/test.yaml/badge.svg)](https://github.com/mathiasesn/llm-mem/actions/workflows/test.yaml)
 ![code coverage](https://raw.githubusercontent.com/mathiasesn/llm-mem/coverage-badge/coverage.svg?raw=true)
 [![Publish](https://github.com/mathiasesn/llm-mem/actions/workflows/publish.yaml/badge.svg)](https://github.com/mathiasesn/llm-mem/actions/workflows/publish.yaml)
