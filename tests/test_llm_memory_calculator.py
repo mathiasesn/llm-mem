@@ -3,7 +3,7 @@ from unittest.mock import MagicMock, mock_open, patch
 
 import pytest
 
-from llm_memory.llm_memory_calculator import LLMMemoryCalculator
+from llm_mem.llm_memory_calculator import LLMMemoryCalculator
 
 
 class TestLLMMemoryCalculator:
@@ -12,7 +12,7 @@ class TestLLMMemoryCalculator:
         return LLMMemoryCalculator()
 
     def test_init_with_token(self):
-        with patch("llm_memory.llm_memory_calculator.login") as mock_login:
+        with patch("llm_mem.llm_memory_calculator.login") as mock_login:
             calculator = LLMMemoryCalculator(hf_token="fake_token")
             assert calculator.hf_token == "fake_token"
             mock_login.assert_called_once_with(token="fake_token")
@@ -29,7 +29,7 @@ class TestLLMMemoryCalculator:
         expected = {"a": 1, "c": 2, "f": 4, "i": 5}
         assert result == expected
 
-    @patch("llm_memory.llm_memory_calculator.hf_hub_download")
+    @patch("llm_mem.llm_memory_calculator.hf_hub_download")
     def test_calculate_kv_cache_memory(self, mock_download, calculator):
         mock_download.return_value = "fake_path"
 
@@ -50,7 +50,7 @@ class TestLLMMemoryCalculator:
             assert isinstance(result, float)
             assert result == pytest.approx(2.147483648, rel=1e-3)
 
-    @patch("llm_memory.llm_memory_calculator.hf_hub_download")
+    @patch("llm_mem.llm_memory_calculator.hf_hub_download")
     def test_calculate_kv_cache_memory_with_kv_heads(self, mock_download, calculator):
         mock_download.return_value = "fake_path"
 
@@ -70,7 +70,7 @@ class TestLLMMemoryCalculator:
             assert isinstance(result, float)
             assert result == pytest.approx(0.536870912, rel=1e-3)
 
-    @patch("llm_memory.llm_memory_calculator.hf_hub_download")
+    @patch("llm_mem.llm_memory_calculator.hf_hub_download")
     def test_calculate_kv_cache_memory_error(self, mock_download, calculator):
         mock_download.side_effect = Exception("Network error")
 
@@ -102,7 +102,7 @@ class TestLLMMemoryCalculator:
         expected_int4 = round((70 * 4) / (32 / (0.5 * 8)) * 1.18, 2)
         assert result == pytest.approx(expected_int4, abs=0.1)
 
-    @patch("llm_memory.llm_memory_calculator.get_safetensors_metadata")
+    @patch("llm_mem.llm_memory_calculator.get_safetensors_metadata")
     def test_get_model_size(self, mock_metadata, calculator):
         # Mocking metadata for a 7B parameter model
         mock_metadata_obj = MagicMock()
@@ -115,7 +115,7 @@ class TestLLMMemoryCalculator:
         assert isinstance(result, float)
         assert result == pytest.approx(16.52, abs=0.1)
 
-    @patch("llm_memory.llm_memory_calculator.get_safetensors_metadata")
+    @patch("llm_mem.llm_memory_calculator.get_safetensors_metadata")
     def test_get_model_size_error(self, mock_metadata, calculator):
         mock_metadata.side_effect = Exception("API error")
 

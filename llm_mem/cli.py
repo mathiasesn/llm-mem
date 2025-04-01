@@ -1,9 +1,9 @@
 import logging
 from argparse import ArgumentParser, Namespace, ArgumentDefaultsHelpFormatter
 
-from llm_memory.llm_memory_calculator import LLMMemoryCalculator
+from llm_mem.llm_memory_calculator import LLMMemoryCalculator
 
-logger = logging.getLogger("llm-memory.cli")
+logger = logging.getLogger("llm-mem.cli")
 
 
 def parse_args() -> Namespace:

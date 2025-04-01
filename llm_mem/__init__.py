@@ -14,6 +14,6 @@ logging.basicConfig(
     handlers=[RichHandler(console=console, rich_tracebacks=True)],
 )
 
-from llm_memory.llm_memory_calculator import LLMMemoryCalculator  # noqa: E402
+from llm_mem.llm_memory_calculator import LLMMemoryCalculator  # noqa: E402
 
 __all__ = ["LLMMemoryCalculator"]

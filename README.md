@@ -1,6 +1,6 @@
-# llm-memory
+# llm-mem
 
-llm-memory is a lightweight Python CLI tool designed to calculate the GPU VRAM requirements for models on Hugging Face. It estimates the memory usage based on the model parameters, selected data type, and desired context length. This tool is ideal for developers and researchers looking to optimize model deployment and resource allocation.
+llm-mem is a lightweight Python CLI tool designed to calculate the GPU VRAM requirements for models on Hugging Face. It estimates the memory usage based on the model parameters, selected data type, and desired context length. This tool is ideal for developers and researchers looking to optimize model deployment and resource allocation.
 
 ## Features
 
@@ -11,7 +11,7 @@ llm-memory is a lightweight Python CLI tool designed to calculate the GPU VRAM r
 
 ## Usage
 
-You can use the llm-memory command from your terminal. The CLI accepts the model ID, data type, and context size as arguments.
+You can use the llm-mem command from your terminal. The CLI accepts the model ID, data type, and context size as arguments.
 
 ### Command-Line Arguments
 
@@ -22,7 +22,7 @@ You can use the llm-memory command from your terminal. The CLI accepts the model
 ### Example
 
 ```shell
-uvx llm-memory -m google/gemma-3-27b-it -d float16 -c 128000
+uvx llm-mem -m google/gemma-3-27b-it -d float16 -c 128000
 ```
 
 The above command will display an estimation of the model VRAM, context VRAM, and the total VRAM required.
@@ -35,11 +35,11 @@ You can install the package using Hatchling or your preferred Python package ins
 # Using pip (if published on PyPI)
 uv venv
 source .venv/bin/activate
-uv pip install llm-memory
+uv pip install llm-mem
 
 # Or clone the repository and install locally
-git clone https://github.com/yourusername/llm-memory.git
-cd llm-memory
+git clone https://github.com/mathiasesn/llm-mem.git
+cd llm-mem
 pip install .
 ```
 
@@ -61,8 +61,8 @@ If you wish to contribute or modify the package:
 Clone the repository
 
 ```shell
-git clone https://github.com/yourusername/llm-memory.git
-cd llm-memory
+git clone https://github.com/mathiasesn/llm-mem.git
+cd llm-mem
 ```
 
 Install development dependencies

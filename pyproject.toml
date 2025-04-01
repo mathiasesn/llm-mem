@@ -3,9 +3,9 @@ requires      = [ "hatchling" ]
 build-backend = "hatchling.build"
 
 [project]
-name            = "llm-memory"
+name            = "llm-mem"
 version         = "0.1.0"
-description     = "lllm-memory is a lightweight Python CLI tool designed to calculate the GPU VRAM requirements for models on Hugging Face"
+description     = "lllm-mem is a lightweight Python CLI tool designed to calculate the GPU VRAM requirements for models on Hugging Face"
 authors         = [ { name = "Mathias Nielsen", email = "mathiasesn1@gmail.com" } ]
 maintainers     = [ { name = "Mathias Nielsen", email = "mathiasesn1@gmail.com" } ]
 readme          = "README.md"
@@ -22,4 +22,4 @@ dependencies    = [
 dev-dependencies = [ "pytest-cov>=6.0.0", "pytest>=8.3.4", "ruff>=0.8.4" ]
 
 [project.scripts]
-llm-memory = "llm_memory.cli.py:main"
+llm-mem = "llm_mem.cli:main"
